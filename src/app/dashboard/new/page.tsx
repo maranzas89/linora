@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  GlassButton,
+  GlassInput,
+  GlassTextarea,
+  statusColors,
+} from "wens-liquid-glass-design-system";
 
 export default function NewAnalysisPage() {
   const [jobTitle, setJobTitle] = useState("");
@@ -48,17 +54,19 @@ export default function NewAnalysisPage() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {error && (
-          <p className="text-red-400 text-sm">{error}</p>
+          <p className="text-sm" style={{ color: statusColors.error.base }}>
+            {error}
+          </p>
         )}
 
         <div className="grid grid-cols-2 gap-4">
-          <input
+          <GlassInput
             placeholder="Job Title"
             value={jobTitle}
             onChange={(e) => setJobTitle(e.target.value)}
             required
           />
-          <input
+          <GlassInput
             placeholder="Company"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
@@ -66,7 +74,7 @@ export default function NewAnalysisPage() {
           />
         </div>
 
-        <textarea
+        <GlassTextarea
           placeholder="Paste the full job description..."
           value={jobDescription}
           onChange={(e) => setJobDescription(e.target.value)}
@@ -74,7 +82,7 @@ export default function NewAnalysisPage() {
           required
         />
 
-        <textarea
+        <GlassTextarea
           placeholder="Paste your resume text..."
           value={resumeText}
           onChange={(e) => setResumeText(e.target.value)}
@@ -82,13 +90,15 @@ export default function NewAnalysisPage() {
           required
         />
 
-        <button
+        <GlassButton
           type="submit"
+          variant="primary"
+          size="lg"
           disabled={loading}
-          className="w-full py-3 rounded-lg bg-accent hover:bg-accent-hover text-white font-medium transition-colors disabled:opacity-50"
+          className="w-full"
         >
           {loading ? "Analyzing..." : "Run Analysis"}
-        </button>
+        </GlassButton>
       </form>
     </main>
   );

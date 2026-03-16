@@ -1,15 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import {
-  glassPanelClasses,
-  glassOverlayClasses,
-  glassRadius,
-  glassSpacing,
-  glassText,
-  glassInteractive,
-  glassTransition,
-} from "./glass-tokens";
+import { glassTw, shadows } from "wens-liquid-glass-design-system";
 
 /* ── Types ────────────────────────────────────────────────── */
 
@@ -74,7 +66,7 @@ export function GlassModal({
     >
       {/* Scrim */}
       <div
-        className={`absolute inset-0 ${glassOverlayClasses}`}
+        className="absolute inset-0 backdrop-blur-sm bg-black/40"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -85,26 +77,22 @@ export function GlassModal({
         tabIndex={-1}
         className={`
           relative w-full ${sizeMap[size]}
-          ${glassPanelClasses}
+          ${glassTw.popover}
+          rounded-3xl
           overflow-hidden outline-none
           animate-[glass-enter_200ms_ease-out]
         `}
+        style={{ boxShadow: shadows.overlay }}
       >
         {/* Header */}
         {title && (
-          <div
-            className={`flex items-center justify-between ${glassSpacing.padding} ${glassSpacing.headerBorder}`}
-          >
-            <h3 className={`text-xl font-medium ${glassText.primary}`}>
+          <div className="flex items-center justify-between p-6 border-b border-white/20">
+            <h3 className="text-xl font-medium text-white">
               {title}
             </h3>
             <button
               onClick={onClose}
-              className={`
-                ${glassText.secondary} hover:${glassText.primary}
-                ${glassTransition.colors}
-                ${glassSpacing.closeButton} ${glassRadius.control} ${glassInteractive.hoverBg}
-              `}
+              className="text-white/70 hover:text-white transition-colors duration-200 p-2 rounded-xl hover:bg-white/10"
               aria-label="Close"
             >
               <svg
@@ -125,7 +113,7 @@ export function GlassModal({
         )}
 
         {/* Body */}
-        <div className={glassSpacing.padding}>{children}</div>
+        <div className="p-6">{children}</div>
       </div>
     </div>
   );

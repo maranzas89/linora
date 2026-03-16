@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "wens-liquid-glass-design-system/styles/tokens.css";
+
+@source "../../../wens-ds-link/packages/design-system/src";
 
 :root {
   --background: #0a0a0a;
@@ -8,6 +11,17 @@
   --accent: #3b82f6;
   --accent-hover: #2563eb;
   --muted: #737373;
+
+  /* Map design system tokens (used by Glass components) */
+  --glass-bg-light: var(--lg-glass-bg-light);
+  --glass-bg-medium: var(--lg-glass-bg-medium);
+  --glass-bg-strong: var(--lg-glass-bg-strong);
+  --glass-border: var(--lg-glass-border);
+  --glass-shadow: var(--lg-glass-shadow);
+  --status-success-light: var(--lg-status-success-light);
+  --status-warning-light: var(--lg-status-warning-light);
+  --status-error-light: var(--lg-status-error-light);
+  --status-info-light: var(--lg-status-info-light);
 }
 
 @theme inline {

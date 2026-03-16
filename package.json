@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3001 --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -12,10 +12,11 @@
     "@anthropic-ai/sdk": "^0.78.0",
     "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.99.1",
+    "@swc/helpers": "^0.5.19",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "wens-liquid-glass-design-system": "file:../Wen's Project Liquid Glass Design System"
+    "wens-liquid-glass-design-system": "file:../wens-ds-link/packages/design-system"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

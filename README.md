@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Local Design System Linking
+
+本项目通过 `file:` + symlink 本地链接 [Liquid Glass Design System](../Wen's%20Project%20Liquid%20Glass%20Design%20System/)。改 design system 源码会实时影响本项目。
+
+详见 [LOCAL_DS_LINKING.md](./LOCAL_DS_LINKING.md)。
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

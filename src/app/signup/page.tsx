@@ -4,6 +4,14 @@ import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import {
+  GlassButton,
+  GlassCard,
+  GlassInput,
+  statusColors,
+  textColors,
+  brandColors,
+} from "wens-liquid-glass-design-system";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
@@ -33,44 +41,50 @@ export default function SignupPage() {
 
   return (
     <main className="flex min-h-screen items-center justify-center px-4">
-      <form onSubmit={handleSignup} className="w-full max-w-sm space-y-4">
-        <h1 className="text-2xl font-bold text-center">Create your account</h1>
+      <GlassCard padding="lg" className="w-full max-w-sm">
+        <form onSubmit={handleSignup} className="space-y-4">
+          <h1 className="text-2xl font-bold text-center">Create your account</h1>
 
-        {error && (
-          <p className="text-red-400 text-sm text-center">{error}</p>
-        )}
+          {error && (
+            <p className="text-sm text-center" style={{ color: statusColors.error.base }}>
+              {error}
+            </p>
+          )}
 
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password (min 6 characters)"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          minLength={6}
-        />
+          <GlassInput
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <GlassInput
+            type="password"
+            placeholder="Password (min 6 characters)"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            minLength={6}
+          />
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full py-2.5 rounded-lg bg-accent hover:bg-accent-hover text-white font-medium transition-colors disabled:opacity-50"
-        >
-          {loading ? "Creating account..." : "Sign up"}
-        </button>
+          <GlassButton
+            type="submit"
+            variant="primary"
+            size="lg"
+            disabled={loading}
+            className="w-full"
+          >
+            {loading ? "Creating account..." : "Sign up"}
+          </GlassButton>
 
-        <p className="text-sm text-muted text-center">
-          Already have an account?{" "}
-          <Link href="/login" className="text-accent hover:underline">
-            Log in
-          </Link>
-        </p>
-      </form>
+          <p className="text-sm text-center" style={{ color: textColors.muted }}>
+            Already have an account?{" "}
+            <Link href="/login" className="hover:underline" style={{ color: brandColors.accent }}>
+              Log in
+            </Link>
+          </p>
+        </form>
+      </GlassCard>
     </main>
   );
 }
