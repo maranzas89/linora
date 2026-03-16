@@ -1,0 +1,124 @@
+/*
+ * Liquid Glass Design System - CSS Design Tokens
+ *
+ * Import in your app's root CSS:
+ *   @import '@wens-project/liquid-glass/styles/tokens.css';
+ *
+ * These custom properties mirror the TypeScript tokens in src/tokens/
+ * so CSS-based and JS-based styling stay in sync.
+ */
+
+:root {
+  /* ------------------------------------------------------------------ */
+  /* Glass Surface Colors                                                */
+  /* ------------------------------------------------------------------ */
+  --lg-glass-bg-light: rgba(255, 255, 255, 0.1);
+  --lg-glass-bg-medium: rgba(255, 255, 255, 0.2);
+  --lg-glass-bg-strong: rgba(255, 255, 255, 0.3);
+  --lg-glass-border: rgba(255, 255, 255, 0.18);
+  --lg-glass-shadow: rgba(0, 0, 0, 0.05);
+
+  /* ------------------------------------------------------------------ */
+  /* Overlay Colors                                                      */
+  /* ------------------------------------------------------------------ */
+  --lg-overlay-backdrop: rgba(0, 0, 0, 0.4);
+  --lg-overlay-popover: rgba(0, 0, 0, 0.85);
+
+  /* ------------------------------------------------------------------ */
+  /* Brand Colors                                                        */
+  /* ------------------------------------------------------------------ */
+  --lg-brand-primary: #667eea;
+  --lg-brand-secondary: #764ba2;
+  --lg-brand-accent: #4facfe;
+
+  /* ------------------------------------------------------------------ */
+  /* Status Colors                                                       */
+  /* ------------------------------------------------------------------ */
+  --lg-status-success: #43e97b;
+  --lg-status-success-light: rgba(67, 233, 123, 0.2);
+  --lg-status-success-border: rgba(74, 222, 128, 0.3);
+
+  --lg-status-warning: #fee140;
+  --lg-status-warning-light: rgba(251, 191, 36, 0.2);
+  --lg-status-warning-border: rgba(251, 191, 36, 0.3);
+
+  --lg-status-error: #f5576c;
+  --lg-status-error-light: rgba(239, 68, 68, 0.2);
+  --lg-status-error-border: rgba(248, 113, 113, 0.3);
+
+  --lg-status-info: #4facfe;
+  --lg-status-info-light: rgba(59, 130, 246, 0.2);
+  --lg-status-info-border: rgba(96, 165, 250, 0.3);
+
+  /* ------------------------------------------------------------------ */
+  /* Text Colors                                                         */
+  /* ------------------------------------------------------------------ */
+  --lg-text-primary: rgba(255, 255, 255, 1);
+  --lg-text-secondary: rgba(255, 255, 255, 0.9);
+  --lg-text-tertiary: rgba(255, 255, 255, 0.7);
+  --lg-text-muted: rgba(255, 255, 255, 0.6);
+  --lg-text-placeholder: rgba(255, 255, 255, 0.5);
+  --lg-text-disabled: rgba(255, 255, 255, 0.4);
+
+  /* ------------------------------------------------------------------ */
+  /* Gradients                                                           */
+  /* ------------------------------------------------------------------ */
+  --lg-gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --lg-gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --lg-gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --lg-gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --lg-gradient-warning: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+
+  /* ------------------------------------------------------------------ */
+  /* Spacing                                                             */
+  /* ------------------------------------------------------------------ */
+  --lg-space-xs: 0.25rem;
+  --lg-space-sm: 0.5rem;
+  --lg-space-md: 1rem;
+  --lg-space-lg: 1.5rem;
+  --lg-space-xl: 2rem;
+  --lg-space-2xl: 3rem;
+
+  /* ------------------------------------------------------------------ */
+  /* Border Radius                                                       */
+  /* ------------------------------------------------------------------ */
+  --lg-radius-sm: 0.5rem;
+  --lg-radius-md: 0.75rem;
+  --lg-radius-lg: 1rem;
+  --lg-radius-xl: 1.5rem;
+  --lg-radius-full: 9999px;
+
+  /* ------------------------------------------------------------------ */
+  /* Shadows                                                             */
+  /* ------------------------------------------------------------------ */
+  --lg-shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --lg-shadow-elevated: 0 16px 48px 0 rgba(0, 0, 0, 0.15);
+  --lg-shadow-overlay: 0 16px 48px 0 rgba(0, 0, 0, 0.3);
+  --lg-shadow-glow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+  /* ------------------------------------------------------------------ */
+  /* Backdrop                                                            */
+  /* ------------------------------------------------------------------ */
+  --lg-blur-sm: 8px;
+  --lg-blur-md: 12px;
+  --lg-blur-lg: 16px;
+  --lg-blur-xl: 24px;
+  --lg-saturate: 150%;
+
+  /* ------------------------------------------------------------------ */
+  /* Animation                                                           */
+  /* ------------------------------------------------------------------ */
+  --lg-duration-fast: 150ms;
+  --lg-duration-normal: 200ms;
+  --lg-duration-smooth: 300ms;
+  --lg-duration-slow: 500ms;
+}
+
+/* Dark mode overrides */
+.dark {
+  --lg-glass-bg-light: rgba(255, 255, 255, 0.05);
+  --lg-glass-bg-medium: rgba(255, 255, 255, 0.1);
+  --lg-glass-bg-strong: rgba(255, 255, 255, 0.15);
+  --lg-glass-border: rgba(255, 255, 255, 0.1);
+  --lg-glass-shadow: rgba(0, 0, 0, 0.3);
+}

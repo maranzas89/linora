@@ -16,7 +16,7 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "wens-liquid-glass-design-system": "file:../wens-ds-link/packages/design-system"
+    "wens-liquid-glass-design-system": "file:./packages/design-system"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
