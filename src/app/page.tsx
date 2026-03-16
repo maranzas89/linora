@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { GlassModal } from "wens-design-system";
+import { GlassModal } from "@/components/glass-modal";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
