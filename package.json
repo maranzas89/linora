@@ -15,7 +15,7 @@
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "wens-design-system": "file:../wens-design-system"
+    "wens-design-system": "git+https://github.com/maranzas89/wens-design-system.git#main"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
